@@ -3,34 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harjutus6-tabel</title>
+    <title>Vormide loomine</title>
 </head>
 <body>
-    <h1>H6</h1>
-    <h2>Vormide loomine</h2>
-    <div>
-        <label>Kasutajanimi:</label> 
-        <input type="user_name" placeholder="max pikkus 6">
-    </div>
-    <div>
-        <label>Kursus:</label> 
-        <input type="kursus" placeholder="max pikkus 3">
-    </div>
-    <div>
-        <label>Osakond:</label> 
-        <input type="number" value="1" min="1" max="5" step="1">
-    </div>
-    <div>
-        <label>Parool:</label> 
-        <input type="password">
-    </div>
-    <div>
-        <form>
-            <label>Roll:</label>
-             <input type="radio" name="roll" value="adm">admin<br>
-             <input type="radio" name="roll" value="mod">moderaator<br>
-            <input type="radio" name="roll" value="usr">user<br>
-        </form>
-    </div>
+  <form>
+    <h1>Vormide loomine</h1>
+    <label>Kasutaja:</label>
+    <input type="text" name="kasutaja" placeholder="max pikkus 6" size="30" maxlength="6"><br>
+    <label>Kursus:</label>
+    <input type="text" name="kursus" placeholder="max pikkus 3" size="30" maxlength="3"><br>
+    <label>Osakonna number:</label>
+    <input type="number" value="1" min="1" max="5"><br>
+    <label>Parool:</label>
+    <input type="password" name="parool" size="30"><br>
+        <label>Vali teenus:</label>
+        <select>
+          <option value="odav">Odav 0.59€</option>
+          <option value="keskmine">Keskmine 0.8€</option>
+          <option value="kallis">Kallis 1€</option>
+        </select>
+    <table>
+        <tr>
+          <td>Roll:</td>
+          <td>
+            <input type="radio" name="roll" value="admin"> Admin <br>
+            <input type="radio" name="roll" value="moderaator"> Moderaator <br>
+            <input type="radio" name="roll" value="user"> User <br>
+          </td>
+        </tr>
+      </table><br>
+      <label>Nõustun tingimustega:</label>
+      <input type="checkbox" name="noustun" value="yes"><br>
+      <table>
+        <tr>
+            <td>Enesetutvustus:</td>
+            <td>
+                <textarea name="enesetutvustus" id="enesetutvustus" rows="10" cols="20"></textarea>
+            </td>
+        </tr>
+      </table>
+      <input type="reset" value="Tühjenda">
+      <input type="submit" value="Saada">
+  </form>
 </body>
 </html>
